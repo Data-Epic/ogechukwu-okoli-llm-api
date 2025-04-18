@@ -81,3 +81,202 @@
 2025-04-18 15:23:29,009 -- Assistant: You're welcome! I hope this information helps you or someone you know who is planning to apply for Medicine. If you have more questions, feel free to ask!
 2025-04-18 15:23:38,683 -- close.started
 2025-04-18 15:23:38,683 -- close.complete
+2025-04-18 17:15:39,309 -- Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a knowledgeable and professional university education assistant. Respond in a clear, concise, and confident tone. Do not include internal thoughts or mention the user’s question. Just answer directly, based only on the current conversation.'}, {'role': 'user', 'content': 'HI'}], 'model': 'deepseek-r1-distill-llama-70b', 'max_tokens': 1000, 'temperature': 1.2}}
+2025-04-18 17:15:39,378 -- Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+2025-04-18 17:15:39,378 -- connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-18 17:15:49,423 -- connect_tcp.failed exception=ConnectTimeout(TimeoutError('timed out'))
+2025-04-18 17:15:49,423 -- Encountered httpx.TimeoutException
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\groq\_base_client.py", line 953, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+2025-04-18 17:15:49,444 -- 2 retries left
+2025-04-18 17:15:49,445 -- Retrying request to /openai/v1/chat/completions in 0.385822 seconds
+2025-04-18 17:15:49,832 -- Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a knowledgeable and professional university education assistant. Respond in a clear, concise, and confident tone. Do not include internal thoughts or mention the user’s question. Just answer directly, based only on the current conversation.'}, {'role': 'user', 'content': 'HI'}], 'model': 'deepseek-r1-distill-llama-70b', 'max_tokens': 1000, 'temperature': 1.2}}
+2025-04-18 17:15:49,834 -- Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+2025-04-18 17:15:49,834 -- connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-18 17:15:59,859 -- connect_tcp.failed exception=ConnectTimeout(TimeoutError('timed out'))
+2025-04-18 17:15:59,859 -- Encountered httpx.TimeoutException
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\groq\_base_client.py", line 953, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+2025-04-18 17:15:59,860 -- 1 retry left
+2025-04-18 17:15:59,860 -- Retrying request to /openai/v1/chat/completions in 0.842699 seconds
+2025-04-18 17:16:00,709 -- Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a knowledgeable and professional university education assistant. Respond in a clear, concise, and confident tone. Do not include internal thoughts or mention the user’s question. Just answer directly, based only on the current conversation.'}, {'role': 'user', 'content': 'HI'}], 'model': 'deepseek-r1-distill-llama-70b', 'max_tokens': 1000, 'temperature': 1.2}}
+2025-04-18 17:16:00,710 -- Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+2025-04-18 17:16:00,711 -- connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-18 17:16:10,723 -- connect_tcp.failed exception=ConnectTimeout(TimeoutError('timed out'))
+2025-04-18 17:16:10,724 -- Encountered httpx.TimeoutException
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\groq\_base_client.py", line 953, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+2025-04-18 17:16:10,724 -- Raising timeout error
+2025-04-18 17:16:57,622 -- Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a knowledgeable and professional university education assistant. Respond in a clear, concise, and confident tone. Do not include internal thoughts or mention the user’s question. Just answer directly, based only on the current conversation.'}, {'role': 'user', 'content': 'hi'}], 'model': 'deepseek-r1-distill-llama-70b', 'max_tokens': 1000, 'temperature': 1.2}}
+2025-04-18 17:16:57,662 -- Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+2025-04-18 17:16:57,663 -- connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-18 17:16:58,141 -- connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000012915071B10>
+2025-04-18 17:16:58,141 -- start_tls.started ssl_context=<ssl.SSLContext object at 0x000001291503CB90> server_hostname='api.groq.com' timeout=5.0
+2025-04-18 17:16:58,271 -- start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000012915071D50>
+2025-04-18 17:16:58,271 -- send_request_headers.started request=<Request [b'POST']>
+2025-04-18 17:16:58,271 -- send_request_headers.complete
+2025-04-18 17:16:58,271 -- send_request_body.started request=<Request [b'POST']>
+2025-04-18 17:16:58,278 -- send_request_body.complete
+2025-04-18 17:16:58,278 -- receive_response_headers.started request=<Request [b'POST']>
+2025-04-18 17:16:58,855 -- receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Apr 2025 16:16:58 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9325783c9d604913-LHR'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Cache-Control', b'private, max-age=0, no-store, no-cache, must-revalidate'), (b'Vary', b'Origin, Accept-Encoding'), (b'X-Groq-Region', b'gcp-europe-west3'), (b'X-Ratelimit-Limit-Requests', b'1000'), (b'X-Ratelimit-Limit-Tokens', b'6000'), (b'X-Ratelimit-Remaining-Requests', b'999'), (b'X-Ratelimit-Remaining-Tokens', b'5928'), (b'X-Ratelimit-Reset-Requests', b'1m26.4s'), (b'X-Ratelimit-Reset-Tokens', b'720ms'), (b'X-Request-Id', b'req_01js4v0rfxe39a0c4yy05aay3s'), (b'Set-Cookie', b'__cf_bm=FsDcWqYigw8nwdpSqF.rEy2tMRg1VxicQ5QQK.aPL8g-1744993018-1.0.1.1-fjVvkWDh8DMLmF3zkwSqua3neS.gFAaqWrANjElHOHw_k7IzCJ15IQZbA5kxPPO1wZ5msefPo6AVj.NFRS3kQqfsiQIKAJXK2w2Gl_ogZiY; path=/; expires=Fri, 18-Apr-25 16:46:58 GMT; domain=.groq.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-04-18 17:16:58,856 -- HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 17:16:58,856 -- receive_response_body.started request=<Request [b'POST']>
+2025-04-18 17:16:58,856 -- receive_response_body.complete
+2025-04-18 17:16:58,856 -- response_closed.started
+2025-04-18 17:16:58,856 -- response_closed.complete
+2025-04-18 17:16:58,856 -- HTTP Response: POST https://api.groq.com/openai/v1/chat/completions "200 OK" Headers({'date': 'Fri, 18 Apr 2025 16:16:58 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9325783c9d604913-LHR', 'cf-cache-status': 'DYNAMIC', 'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate', 'vary': 'Origin, Accept-Encoding', 'x-groq-region': 'gcp-europe-west3', 'x-ratelimit-limit-requests': '1000', 'x-ratelimit-limit-tokens': '6000', 'x-ratelimit-remaining-requests': '999', 'x-ratelimit-remaining-tokens': '5928', 'x-ratelimit-reset-requests': '1m26.4s', 'x-ratelimit-reset-tokens': '720ms', 'x-request-id': 'req_01js4v0rfxe39a0c4yy05aay3s', 'set-cookie': '__cf_bm=FsDcWqYigw8nwdpSqF.rEy2tMRg1VxicQ5QQK.aPL8g-1744993018-1.0.1.1-fjVvkWDh8DMLmF3zkwSqua3neS.gFAaqWrANjElHOHw_k7IzCJ15IQZbA5kxPPO1wZ5msefPo6AVj.NFRS3kQqfsiQIKAJXK2w2Gl_ogZiY; path=/; expires=Fri, 18-Apr-25 16:46:58 GMT; domain=.groq.com; HttpOnly; Secure; SameSite=None', 'server': 'cloudflare', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-04-18 17:16:58,870 -- API Response: ChatCompletion(id='chatcmpl-a8048306-3ee6-4a85-90dc-0a659bcd7943', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='<think>\nAlright, the user just said "hi." I should respond in a friendly and approachable manner. Let them know I\'m here to help with their education-related needs. I need to keep it professional but warm. Maybe something like, "Hello! How can I assist you today?" That sounds welcoming and invites them to share what they need help with.\n</think>\n\nHello! How can I assist you today?', role='assistant', executed_tools=None, function_call=None, reasoning=None, tool_calls=None))], created=1744993018, model='deepseek-r1-distill-llama-70b', object='chat.completion', system_fingerprint='fp_454c494f52', usage=CompletionUsage(completion_tokens=85, prompt_tokens=48, total_tokens=133, completion_time=0.309090909, prompt_time=0.004992797, queue_time=0.08517925100000001, total_time=0.314083706), usage_breakdown=UsageBreakdown(models=None), x_groq={'id': 'req_01js4v0rfxe39a0c4yy05aay3s'})
+2025-04-18 17:16:58,872 -- Customer query: hi
+2025-04-18 17:16:58,872 -- Assistant: Hello! How can I assist you today?
+2025-04-18 17:17:06,498 -- close.started
+2025-04-18 17:17:06,498 -- close.complete

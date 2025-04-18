@@ -55,7 +55,9 @@ class EducationalCustomerAssistant:# class for main script building named Educat
             logging.info(f"Customer query: {user_input}") # adding customer or user query to the log file
             logging.info(f"Assistant: {cleaned_reply}") # adding assisstant's to the log file
 
-
+            """
+                The httpx library is utilised for handling http errors i.e errors with codes 401,404,429 500 etc
+            """
         except httpx.HTTPStatusError as http_err:
             status = http_err.response.status_code
             print(f"HTTP error: {status}")
@@ -65,25 +67,26 @@ class EducationalCustomerAssistant:# class for main script building named Educat
             elif status == 404:
                 print("Model not found.")
             elif status == 429:
-                print("Rate limit exceeded.")
+                print("Rate limit exceeded.You have sent too many requests")
             else:
                 print(f"Response text: {http_err.response.text}")
-        except Exception as e:
+        except Exception as e: # line of code for handling errors that occured suddenly and cannot be accounted for using the httpx library
             print(f"Unexpected error: {e}")
         return True
-
+# main block of code to urn the file
 if __name__ == "__main__":
-    api_key = os.getenv("GROQ_API_KEY")
+    api_key = os.getenv("GROQ_API_KEY") # loading the api_key stored secretly in the .env file
 
-    if not api_key:
+    if not api_key:# handling error just incase my api key is not in the .env file
         print("GROQ_API_KEY not found in environment variables.")
-    else:
+    else: # calling the class EducationalCustomerAssistant
         assistant = EducationalCustomerAssistant(api_key)
-
-        print("Hello i am your educational assisstant for today.\nHow may i be of help to you")
+    #    Print statement for welcoming the intending user
+        print("Hello i am your educational assisstant for today.\n\nHow may i be of help to you\nIf you no longer wish to continue, input `stop`")
+        #while loop for handling the user input and assistant's output
         while True:
             user_input = assistant.get_user_input()
-            if user_input.lower() == "stop":
+            if user_input.lower() == "stop": # line of code to stop quering the api
                 break
             continue_chat = assistant.chat(user_input)
             if not continue_chat:
