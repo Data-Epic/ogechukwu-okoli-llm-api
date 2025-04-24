@@ -1,0 +1,282 @@
+2025-04-18 15:22:27,604 -- Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a knowledgeable and professional university education assistant. Respond in a clear, concise, and confident tone. Do not include internal thoughts or mention the userï¿½s question. Just answer directly, based only on the current conversation.'}, {'role': 'user', 'content': 'I need information on university applications in Nigeria'}], 'model': 'deepseek-r1-distill-llama-70b', 'max_tokens': 500, 'temperature': 1.2}}
+2025-04-18 15:22:27,667 -- Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+2025-04-18 15:22:27,668 -- connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-18 15:22:27,877 -- connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000015458071610>
+2025-04-18 15:22:27,877 -- start_tls.started ssl_context=<ssl.SSLContext object at 0x000001545803CB00> server_hostname='api.groq.com' timeout=5.0
+2025-04-18 15:22:28,091 -- start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000154580717D0>
+2025-04-18 15:22:28,091 -- send_request_headers.started request=<Request [b'POST']>
+2025-04-18 15:22:28,091 -- send_request_headers.complete
+2025-04-18 15:22:28,091 -- send_request_body.started request=<Request [b'POST']>
+2025-04-18 15:22:28,098 -- send_request_body.complete
+2025-04-18 15:22:28,098 -- receive_response_headers.started request=<Request [b'POST']>
+2025-04-18 15:22:30,250 -- receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Apr 2025 14:22:29 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9324d080e9799492-LHR'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Cache-Control', b'private, max-age=0, no-store, no-cache, must-revalidate'), (b'Vary', b'Origin, Accept-Encoding'), (b'X-Groq-Region', b'gcp-europe-west3'), (b'X-Ratelimit-Limit-Requests', b'1000'), (b'X-Ratelimit-Limit-Tokens', b'6000'), (b'X-Ratelimit-Remaining-Requests', b'999'), (b'X-Ratelimit-Remaining-Tokens', b'5914'), (b'X-Ratelimit-Reset-Requests', b'1m26.4s'), (b'X-Ratelimit-Reset-Tokens', b'860ms'), (b'X-Request-Id', b'req_01js4mf35we0tvgv5cxhd7ajes'), (b'Set-Cookie', b'__cf_bm=A3KmK4eBVgER2CcRm0ENxWvAm_.vUIheiqNp0IEaFP0-1744986149-1.0.1.1-iMiw0.p6QBPpLarroVEM1z3Dx0P5gKzKJ9RltHWz_SEeWNmhArJ3u9dhLbPwyGNX987O.pIypNscnNwjVUp3LLmmp.bpf6OJOZiNOuidV1A; path=/; expires=Fri, 18-Apr-25 14:52:29 GMT; domain=.groq.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-04-18 15:22:30,251 -- HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 15:22:30,251 -- receive_response_body.started request=<Request [b'POST']>
+2025-04-18 15:22:30,251 -- receive_response_body.complete
+2025-04-18 15:22:30,251 -- response_closed.started
+2025-04-18 15:22:30,251 -- response_closed.complete
+2025-04-18 15:22:30,251 -- HTTP Response: POST https://api.groq.com/openai/v1/chat/completions "200 OK" Headers({'date': 'Fri, 18 Apr 2025 14:22:29 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9324d080e9799492-LHR', 'cf-cache-status': 'DYNAMIC', 'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate', 'vary': 'Origin, Accept-Encoding', 'x-groq-region': 'gcp-europe-west3', 'x-ratelimit-limit-requests': '1000', 'x-ratelimit-limit-tokens': '6000', 'x-ratelimit-remaining-requests': '999', 'x-ratelimit-remaining-tokens': '5914', 'x-ratelimit-reset-requests': '1m26.4s', 'x-ratelimit-reset-tokens': '860ms', 'x-request-id': 'req_01js4mf35we0tvgv5cxhd7ajes', 'set-cookie': '__cf_bm=A3KmK4eBVgER2CcRm0ENxWvAm_.vUIheiqNp0IEaFP0-1744986149-1.0.1.1-iMiw0.p6QBPpLarroVEM1z3Dx0P5gKzKJ9RltHWz_SEeWNmhArJ3u9dhLbPwyGNX987O.pIypNscnNwjVUp3LLmmp.bpf6OJOZiNOuidV1A; path=/; expires=Fri, 18-Apr-25 14:52:29 GMT; domain=.groq.com; HttpOnly; Secure; SameSite=None', 'server': 'cloudflare', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-04-18 15:22:30,251 -- API Response: ChatCompletion(id='chatcmpl-85bb7356-7091-484a-872c-9a865303d30b', choices=[Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content="<think>\nOkay, so the user is asking about university applications in Nigeria. I need to figure out how to best provide that information. First, I should determine what exactly they're looking forï¿½whether it's the process, deadlines, requirements, or something else. Since the query is pretty broad, I'll cover the key areas to give a comprehensive overview.\n\nThey might be a student or a parent looking to apply, so I should structure the information in a logical flow, maybe starting with eligibility, steps to apply, important exams, and then additional details like deadlines and required documents. I should also mention both federal and state universities because some students might prefer one over the other.\n\nI remember that JAMB is a crucial part of the process in Nigeria. I'll need to explain what JAMB is and its role. Also, POST-UTME comes after that, so including that as a step makes sense. Maybe I should break it down into steps: meeting eligibility, registering for JAMB, preparing for exams, choosing institutions, registering for POST-UTME if needed, and then checking admission status.\n\nOh, and it's important to mention the different types of admissionsï¿½UTME and Direct Entry. The user might not be aware of the difference, so clarifying that would be helpful. I should also include some additional info like deadlines and required documents to make the response thorough.\n\nI should make sure the language is clear and direct without being too technical. No need for markdown, so just plain text with each section clearly separated. Let me outline the structure: eligibility, steps to apply, important exams, additional info on deadlines and docs. This should cover everything a prospective applicant would need to know.\n\nWait, I should also mention O'Level results because that's a common requirement. And maybe a note about course selection since some courses are competitive. The user might appreciate tips on being careful with their choices. \n\nI think that's a solid plan. I'll present the information in a straightforward manner, ensuring each point is concise and easy to follow. Avoiding any jargon will make it more accessible. Let's put it all together now.\n</think>\n\nUniversity applications in Nigeria typically involve several steps, primarily through the Joint Admissions and Matriculation Board (JAMB) for undergraduate programs. Here's a breakdown of the process:\n\n### **Eligibility Requirements**\n1. **O'Level Results**: Candidates must have at least five credit passes in relevant subjects, including English and", role='assistant', executed_tools=None, function_call=None, reasoning=None, tool_calls=None))], created=1744986148, model='deepseek-r1-distill-llama-70b', object='chat.completion', system_fingerprint='fp_454c494f52', usage=CompletionUsage(completion_tokens=500, prompt_tokens=55, total_tokens=555, completion_time=1.818181818, prompt_time=0.004994071, queue_time=0.085249863, total_time=1.823175889), usage_breakdown=UsageBreakdown(models=None), x_groq={'id': 'req_01js4mf35we0tvgv5cxhd7ajes'})
+2025-04-18 15:22:30,262 -- Customer query: I need information on university applications in Nigeria
+2025-04-18 15:22:30,262 -- Assistant: University applications in Nigeria typically involve several steps, primarily through the Joint Admissions and Matriculation Board (JAMB) for undergraduate programs. Here's a breakdown of the process:
+
+### **Eligibility Requirements**
+1. **O'Level Results**: Candidates must have at least five credit passes in relevant subjects, including English and
+2025-04-18 15:22:57,094 -- Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a knowledgeable and professional university education assistant. Respond in a clear, concise, and confident tone. Do not include internal thoughts or mention the userï¿½s question. Just answer directly, based only on the current conversation.'}, {'role': 'user', 'content': 'I need information on university applications in Nigeria'}, {'role': 'assistant', 'content': "University applications in Nigeria typically involve several steps, primarily through the Joint Admissions and Matriculation Board (JAMB) for undergraduate programs. Here's a breakdown of the process:\n\n### **Eligibility Requirements**\n1. **O'Level Results**: Candidates must have at least five credit passes in relevant subjects, including English and"}, {'role': 'user', 'content': 'What is the Jamb requirement for medicine in most schools'}], 'model': 'deepseek-r1-distill-llama-70b', 'max_tokens': 500, 'temperature': 1.2}}
+2025-04-18 15:22:57,096 -- Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+2025-04-18 15:22:57,096 -- close.started
+2025-04-18 15:22:57,097 -- close.complete
+2025-04-18 15:22:57,097 -- connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-18 15:23:05,362 -- connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000154580915D0>
+2025-04-18 15:23:05,363 -- start_tls.started ssl_context=<ssl.SSLContext object at 0x000001545803CB00> server_hostname='api.groq.com' timeout=5.0
+2025-04-18 15:23:05,499 -- start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000015458091690>
+2025-04-18 15:23:05,499 -- send_request_headers.started request=<Request [b'POST']>
+2025-04-18 15:23:05,499 -- send_request_headers.complete
+2025-04-18 15:23:05,499 -- send_request_body.started request=<Request [b'POST']>
+2025-04-18 15:23:05,504 -- send_request_body.complete
+2025-04-18 15:23:05,504 -- receive_response_headers.started request=<Request [b'POST']>
+2025-04-18 15:23:07,718 -- receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Apr 2025 14:23:07 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9324d16acc84b257-LHR'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Cache-Control', b'private, max-age=0, no-store, no-cache, must-revalidate'), (b'Vary', b'Origin, Accept-Encoding'), (b'X-Groq-Region', b'gcp-europe-west3'), (b'X-Ratelimit-Limit-Requests', b'1000'), (b'X-Ratelimit-Limit-Tokens', b'6000'), (b'X-Ratelimit-Remaining-Requests', b'998'), (b'X-Ratelimit-Remaining-Tokens', b'5803'), (b'X-Ratelimit-Reset-Requests', b'2m15.362999999s'), (b'X-Ratelimit-Reset-Tokens', b'1.97s'), (b'X-Request-Id', b'req_01js4mg7qte19sqkm9d0g6j8e1'), (b'Server', b'cloudflare'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-04-18 15:23:07,719 -- HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 15:23:07,719 -- receive_response_body.started request=<Request [b'POST']>
+2025-04-18 15:23:07,719 -- receive_response_body.complete
+2025-04-18 15:23:07,719 -- response_closed.started
+2025-04-18 15:23:07,719 -- response_closed.complete
+2025-04-18 15:23:07,721 -- HTTP Response: POST https://api.groq.com/openai/v1/chat/completions "200 OK" Headers({'date': 'Fri, 18 Apr 2025 14:23:07 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9324d16acc84b257-LHR', 'cf-cache-status': 'DYNAMIC', 'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate', 'vary': 'Origin, Accept-Encoding', 'x-groq-region': 'gcp-europe-west3', 'x-ratelimit-limit-requests': '1000', 'x-ratelimit-limit-tokens': '6000', 'x-ratelimit-remaining-requests': '998', 'x-ratelimit-remaining-tokens': '5803', 'x-ratelimit-reset-requests': '2m15.362999999s', 'x-ratelimit-reset-tokens': '1.97s', 'x-request-id': 'req_01js4mg7qte19sqkm9d0g6j8e1', 'server': 'cloudflare', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-04-18 15:23:07,722 -- API Response: ChatCompletion(id='chatcmpl-ecde4104-9031-47fc-88af-91bc40c70fcb', choices=[Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content="<think>\nAlright, the user is asking about the JAMB requirements for studying Medicine in most Nigerian schools. From the previous conversation, they were inquiring about the general university application process in Nigeria, so this is a follow-up focusing on a specific course.\n\nI remember that JAMB scores are crucial, and for competitive courses like Medicine, the requirements are usually higher. The user probably wants to know the minimum JAMB score and other associated steps like POST-UTME and O'Level requirements.\n\nI should structure the answer clearly. First, mention the high JAMB score cut-off, around 250-300. Then, explain the two main steps: JAMB and POST-UTME. For each step, include the cut-off marks and how they work.\n\nAlso, the user might not be aware that other factors like O'Level results and internal policies of the schools can influence admission. Including these points would give a comprehensive answer. Additionally, highlighting that higher scores increase chances, especially in popular schools, would be helpful.\n\nMaybe the user is preparing for JAMB and is researching the necessary scores. They could be a student or a parent seeking guidance on the requirements. Tailoring the answer to emphasize both JAMB and POST-UTME scores, along with tips, would address their potential concerns and provide actionable advice.\n\nI should make sure the language is clear and concise, avoiding any markdown. Just straightforward information with maybe some examples to make it relatable. Ensuring the user understands the importance of high scores and post-exam processes will help them prepare adequately.\n</think>\n\nThe JAMB requirement for Medicine in most Nigerian universities is typically high due to the competitive nature of the course. Hereï¿½s a breakdown of the general requirements:\n\n### **JAMB Score Requirement:**\n- Candidates are expected to score **at least 250ï¿½300** in JAMB for Medicine and Surgery. However, this can vary slightly by institution.\n- Some top universities like the University of Lagos (UNILAG), University of Ibadan (UI), and Obafemi Awolowo University (OAU) often require **280 or higher** in JAMB for Medicine.\n\n### **Key Steps to Gain Admission:**\n1. **JAMB UTME:**\n   - Candidates must sit for the JAMB UTME and select Medicine and Surgery as their first choice.\n   - Score high in JAMB to meet the cut-off mark for your chosen institution.\n\n2. **POST-UTME Screening:**\n", role='assistant', executed_tools=None, function_call=None, reasoning=None, tool_calls=None))], created=1744986185, model='deepseek-r1-distill-llama-70b', object='chat.completion', system_fingerprint='fp_454c494f52', usage=CompletionUsage(completion_tokens=500, prompt_tokens=135, total_tokens=635, completion_time=1.818181818, prompt_time=0.009959092, queue_time=0.085513524, total_time=1.8281409100000001), usage_breakdown=UsageBreakdown(models=None), x_groq={'id': 'req_01js4mg7qte19sqkm9d0g6j8e1'})
+2025-04-18 15:23:07,725 -- Customer query: What is the Jamb requirement for medicine in most schools
+2025-04-18 15:23:07,725 -- Assistant: The JAMB requirement for Medicine in most Nigerian universities is typically high due to the competitive nature of the course. Hereï¿½s a breakdown of the general requirements:
+
+### **JAMB Score Requirement:**
+- Candidates are expected to score **at least 250ï¿½300** in JAMB for Medicine and Surgery. However, this can vary slightly by institution.
+- Some top universities like the University of Lagos (UNILAG), University of Ibadan (UI), and Obafemi Awolowo University (OAU) often require **280 or higher** in JAMB for Medicine.
+
+### **Key Steps to Gain Admission:**
+1. **JAMB UTME:**
+   - Candidates must sit for the JAMB UTME and select Medicine and Surgery as their first choice.
+   - Score high in JAMB to meet the cut-off mark for your chosen institution.
+
+2. **POST-UTME Screening:**
+2025-04-18 15:23:27,730 -- Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a knowledgeable and professional university education assistant. Respond in a clear, concise, and confident tone. Do not include internal thoughts or mention the userï¿½s question. Just answer directly, based only on the current conversation.'}, {'role': 'user', 'content': 'I need information on university applications in Nigeria'}, {'role': 'assistant', 'content': "University applications in Nigeria typically involve several steps, primarily through the Joint Admissions and Matriculation Board (JAMB) for undergraduate programs. Here's a breakdown of the process:\n\n### **Eligibility Requirements**\n1. **O'Level Results**: Candidates must have at least five credit passes in relevant subjects, including English and"}, {'role': 'user', 'content': 'What is the Jamb requirement for medicine in most schools'}, {'role': 'assistant', 'content': 'The JAMB requirement for Medicine in most Nigerian universities is typically high due to the competitive nature of the course. Hereï¿½s a breakdown of the general requirements:\n\n### **JAMB Score Requirement:**\n- Candidates are expected to score **at least 250ï¿½300** in JAMB for Medicine and Surgery. However, this can vary slightly by institution.\n- Some top universities like the University of Lagos (UNILAG), University of Ibadan (UI), and Obafemi Awolowo University (OAU) often require **280 or higher** in JAMB for Medicine.\n\n### **Key Steps to Gain Admission:**\n1. **JAMB UTME:**\n   - Candidates must sit for the JAMB UTME and select Medicine and Surgery as their first choice.\n   - Score high in JAMB to meet the cut-off mark for your chosen institution.\n\n2. **POST-UTME Screening:**'}, {'role': 'user', 'content': 'Thank you so much'}], 'model': 'deepseek-r1-distill-llama-70b', 'max_tokens': 500, 'temperature': 1.2}}
+2025-04-18 15:23:27,731 -- Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+2025-04-18 15:23:27,731 -- close.started
+2025-04-18 15:23:27,732 -- close.complete
+2025-04-18 15:23:27,732 -- connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-18 15:23:27,855 -- connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000154580A0250>
+2025-04-18 15:23:27,855 -- start_tls.started ssl_context=<ssl.SSLContext object at 0x000001545803CB00> server_hostname='api.groq.com' timeout=5.0
+2025-04-18 15:23:27,995 -- start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000154580A0290>
+2025-04-18 15:23:27,995 -- send_request_headers.started request=<Request [b'POST']>
+2025-04-18 15:23:27,995 -- send_request_headers.complete
+2025-04-18 15:23:27,995 -- send_request_body.started request=<Request [b'POST']>
+2025-04-18 15:23:28,002 -- send_request_body.complete
+2025-04-18 15:23:28,002 -- receive_response_headers.started request=<Request [b'POST']>
+2025-04-18 15:23:28,999 -- receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Apr 2025 14:23:28 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9324d1f74b848b70-LHR'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Cache-Control', b'private, max-age=0, no-store, no-cache, must-revalidate'), (b'Vary', b'Origin, Accept-Encoding'), (b'X-Groq-Region', b'gcp-europe-west3'), (b'X-Ratelimit-Limit-Requests', b'1000'), (b'X-Ratelimit-Limit-Tokens', b'6000'), (b'X-Ratelimit-Remaining-Requests', b'997'), (b'X-Ratelimit-Remaining-Tokens', b'5592'), (b'X-Ratelimit-Reset-Requests', b'3m56.72s'), (b'X-Ratelimit-Reset-Tokens', b'4.08s'), (b'X-Request-Id', b'req_01js4mgxpbeax9ybcwaqsywh55'), (b'Server', b'cloudflare'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-04-18 15:23:29,005 -- HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 15:23:29,005 -- receive_response_body.started request=<Request [b'POST']>
+2025-04-18 15:23:29,006 -- receive_response_body.complete
+2025-04-18 15:23:29,006 -- response_closed.started
+2025-04-18 15:23:29,006 -- response_closed.complete
+2025-04-18 15:23:29,006 -- HTTP Response: POST https://api.groq.com/openai/v1/chat/completions "200 OK" Headers({'date': 'Fri, 18 Apr 2025 14:23:28 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9324d1f74b848b70-LHR', 'cf-cache-status': 'DYNAMIC', 'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate', 'vary': 'Origin, Accept-Encoding', 'x-groq-region': 'gcp-europe-west3', 'x-ratelimit-limit-requests': '1000', 'x-ratelimit-limit-tokens': '6000', 'x-ratelimit-remaining-requests': '997', 'x-ratelimit-remaining-tokens': '5592', 'x-ratelimit-reset-requests': '3m56.72s', 'x-ratelimit-reset-tokens': '4.08s', 'x-request-id': 'req_01js4mgxpbeax9ybcwaqsywh55', 'server': 'cloudflare', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-04-18 15:23:29,006 -- API Response: ChatCompletion(id='chatcmpl-7b0afebf-41f9-4c65-870d-a5988ac3e73f', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content="<think>\nOkay, so the user started by asking for information on university applications in Nigeria. I gave them an overview, mentioning JAMB and the general process. Then, they asked specifically about JAMB requirements for Medicine, which is a competitive field. I provided detailed info on the high JAMB scores needed and the steps involved, including UTME and POST-UTME. \n\nNow, they responded with a thank you. I should acknowledge their gratitude warmly. They might be preparing for JAMB or helping someone who is, so it's important to encourage them and offer further assistance. \n\nI should make sure my response is friendly and supportive, showing that I'm here to help with any more questions they have. Also, keeping it concise and natural without any fancy formatting.\n</think>\n\nYou're welcome! I hope this information helps you or someone you know who is planning to apply for Medicine. If you have more questions, feel free to ask!", role='assistant', executed_tools=None, function_call=None, reasoning=None, tool_calls=None))], created=1744986208, model='deepseek-r1-distill-llama-70b', object='chat.completion', system_fingerprint='fp_454c494f52', usage=CompletionUsage(completion_tokens=191, prompt_tokens=325, total_tokens=516, completion_time=0.694545455, prompt_time=0.020553992, queue_time=0.085131662, total_time=0.715099447), usage_breakdown=UsageBreakdown(models=None), x_groq={'id': 'req_01js4mgxpbeax9ybcwaqsywh55'})
+2025-04-18 15:23:29,006 -- Customer query: Thank you so much
+2025-04-18 15:23:29,009 -- Assistant: You're welcome! I hope this information helps you or someone you know who is planning to apply for Medicine. If you have more questions, feel free to ask!
+2025-04-18 15:23:38,683 -- close.started
+2025-04-18 15:23:38,683 -- close.complete
+2025-04-18 17:15:39,309 -- Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a knowledgeable and professional university education assistant. Respond in a clear, concise, and confident tone. Do not include internal thoughts or mention the user’s question. Just answer directly, based only on the current conversation.'}, {'role': 'user', 'content': 'HI'}], 'model': 'deepseek-r1-distill-llama-70b', 'max_tokens': 1000, 'temperature': 1.2}}
+2025-04-18 17:15:39,378 -- Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+2025-04-18 17:15:39,378 -- connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-18 17:15:49,423 -- connect_tcp.failed exception=ConnectTimeout(TimeoutError('timed out'))
+2025-04-18 17:15:49,423 -- Encountered httpx.TimeoutException
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\groq\_base_client.py", line 953, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+2025-04-18 17:15:49,444 -- 2 retries left
+2025-04-18 17:15:49,445 -- Retrying request to /openai/v1/chat/completions in 0.385822 seconds
+2025-04-18 17:15:49,832 -- Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a knowledgeable and professional university education assistant. Respond in a clear, concise, and confident tone. Do not include internal thoughts or mention the user’s question. Just answer directly, based only on the current conversation.'}, {'role': 'user', 'content': 'HI'}], 'model': 'deepseek-r1-distill-llama-70b', 'max_tokens': 1000, 'temperature': 1.2}}
+2025-04-18 17:15:49,834 -- Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+2025-04-18 17:15:49,834 -- connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-18 17:15:59,859 -- connect_tcp.failed exception=ConnectTimeout(TimeoutError('timed out'))
+2025-04-18 17:15:59,859 -- Encountered httpx.TimeoutException
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\groq\_base_client.py", line 953, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+2025-04-18 17:15:59,860 -- 1 retry left
+2025-04-18 17:15:59,860 -- Retrying request to /openai/v1/chat/completions in 0.842699 seconds
+2025-04-18 17:16:00,709 -- Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a knowledgeable and professional university education assistant. Respond in a clear, concise, and confident tone. Do not include internal thoughts or mention the user’s question. Just answer directly, based only on the current conversation.'}, {'role': 'user', 'content': 'HI'}], 'model': 'deepseek-r1-distill-llama-70b', 'max_tokens': 1000, 'temperature': 1.2}}
+2025-04-18 17:16:00,710 -- Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+2025-04-18 17:16:00,711 -- connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-18 17:16:10,723 -- connect_tcp.failed exception=ConnectTimeout(TimeoutError('timed out'))
+2025-04-18 17:16:10,724 -- Encountered httpx.TimeoutException
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\groq\_base_client.py", line 953, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+2025-04-18 17:16:10,724 -- Raising timeout error
+2025-04-18 17:16:57,622 -- Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a knowledgeable and professional university education assistant. Respond in a clear, concise, and confident tone. Do not include internal thoughts or mention the user’s question. Just answer directly, based only on the current conversation.'}, {'role': 'user', 'content': 'hi'}], 'model': 'deepseek-r1-distill-llama-70b', 'max_tokens': 1000, 'temperature': 1.2}}
+2025-04-18 17:16:57,662 -- Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+2025-04-18 17:16:57,663 -- connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-18 17:16:58,141 -- connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000012915071B10>
+2025-04-18 17:16:58,141 -- start_tls.started ssl_context=<ssl.SSLContext object at 0x000001291503CB90> server_hostname='api.groq.com' timeout=5.0
+2025-04-18 17:16:58,271 -- start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000012915071D50>
+2025-04-18 17:16:58,271 -- send_request_headers.started request=<Request [b'POST']>
+2025-04-18 17:16:58,271 -- send_request_headers.complete
+2025-04-18 17:16:58,271 -- send_request_body.started request=<Request [b'POST']>
+2025-04-18 17:16:58,278 -- send_request_body.complete
+2025-04-18 17:16:58,278 -- receive_response_headers.started request=<Request [b'POST']>
+2025-04-18 17:16:58,855 -- receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 18 Apr 2025 16:16:58 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9325783c9d604913-LHR'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Cache-Control', b'private, max-age=0, no-store, no-cache, must-revalidate'), (b'Vary', b'Origin, Accept-Encoding'), (b'X-Groq-Region', b'gcp-europe-west3'), (b'X-Ratelimit-Limit-Requests', b'1000'), (b'X-Ratelimit-Limit-Tokens', b'6000'), (b'X-Ratelimit-Remaining-Requests', b'999'), (b'X-Ratelimit-Remaining-Tokens', b'5928'), (b'X-Ratelimit-Reset-Requests', b'1m26.4s'), (b'X-Ratelimit-Reset-Tokens', b'720ms'), (b'X-Request-Id', b'req_01js4v0rfxe39a0c4yy05aay3s'), (b'Set-Cookie', b'__cf_bm=FsDcWqYigw8nwdpSqF.rEy2tMRg1VxicQ5QQK.aPL8g-1744993018-1.0.1.1-fjVvkWDh8DMLmF3zkwSqua3neS.gFAaqWrANjElHOHw_k7IzCJ15IQZbA5kxPPO1wZ5msefPo6AVj.NFRS3kQqfsiQIKAJXK2w2Gl_ogZiY; path=/; expires=Fri, 18-Apr-25 16:46:58 GMT; domain=.groq.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-04-18 17:16:58,856 -- HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 17:16:58,856 -- receive_response_body.started request=<Request [b'POST']>
+2025-04-18 17:16:58,856 -- receive_response_body.complete
+2025-04-18 17:16:58,856 -- response_closed.started
+2025-04-18 17:16:58,856 -- response_closed.complete
+2025-04-18 17:16:58,856 -- HTTP Response: POST https://api.groq.com/openai/v1/chat/completions "200 OK" Headers({'date': 'Fri, 18 Apr 2025 16:16:58 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9325783c9d604913-LHR', 'cf-cache-status': 'DYNAMIC', 'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate', 'vary': 'Origin, Accept-Encoding', 'x-groq-region': 'gcp-europe-west3', 'x-ratelimit-limit-requests': '1000', 'x-ratelimit-limit-tokens': '6000', 'x-ratelimit-remaining-requests': '999', 'x-ratelimit-remaining-tokens': '5928', 'x-ratelimit-reset-requests': '1m26.4s', 'x-ratelimit-reset-tokens': '720ms', 'x-request-id': 'req_01js4v0rfxe39a0c4yy05aay3s', 'set-cookie': '__cf_bm=FsDcWqYigw8nwdpSqF.rEy2tMRg1VxicQ5QQK.aPL8g-1744993018-1.0.1.1-fjVvkWDh8DMLmF3zkwSqua3neS.gFAaqWrANjElHOHw_k7IzCJ15IQZbA5kxPPO1wZ5msefPo6AVj.NFRS3kQqfsiQIKAJXK2w2Gl_ogZiY; path=/; expires=Fri, 18-Apr-25 16:46:58 GMT; domain=.groq.com; HttpOnly; Secure; SameSite=None', 'server': 'cloudflare', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-04-18 17:16:58,870 -- API Response: ChatCompletion(id='chatcmpl-a8048306-3ee6-4a85-90dc-0a659bcd7943', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='<think>\nAlright, the user just said "hi." I should respond in a friendly and approachable manner. Let them know I\'m here to help with their education-related needs. I need to keep it professional but warm. Maybe something like, "Hello! How can I assist you today?" That sounds welcoming and invites them to share what they need help with.\n</think>\n\nHello! How can I assist you today?', role='assistant', executed_tools=None, function_call=None, reasoning=None, tool_calls=None))], created=1744993018, model='deepseek-r1-distill-llama-70b', object='chat.completion', system_fingerprint='fp_454c494f52', usage=CompletionUsage(completion_tokens=85, prompt_tokens=48, total_tokens=133, completion_time=0.309090909, prompt_time=0.004992797, queue_time=0.08517925100000001, total_time=0.314083706), usage_breakdown=UsageBreakdown(models=None), x_groq={'id': 'req_01js4v0rfxe39a0c4yy05aay3s'})
+2025-04-18 17:16:58,872 -- Customer query: hi
+2025-04-18 17:16:58,872 -- Assistant: Hello! How can I assist you today?
+2025-04-18 17:17:06,498 -- close.started
+2025-04-18 17:17:06,498 -- close.complete
